@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Inter:wght@400;500;600;700&family=Signika+Negative:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Game</title>
+</head>
+<body onload="displayBox();">
+ <!-- <body>  -->
+  <div class="popup-box hidden">
+          <form>
+            <p id="errorMessage"></p>
+            <label>Player Name</label>
+            <br>
+            <input type="text" class="form-control" id="player-name" placeholder="Enter player name">
+            <br>
+            <label>Game Point</label>
+            <br>
+            <input type="number" class="form-control" id="game-point" placeholder="Enter game point">
+            <br>
+            <button id="popupBox-btn" class="popupBox-btn">Play Game</button>
+          </form>
+  </div>
+  <div class="mainBox">
+    <img src="./img/clash royale.jpg" class="img1" alt="">
+    <img src="./img/clash royale2.jpg" class="img2 hidden" alt="">
+    <img src="/img/clash royale3.jpg" class="img3 hidden" alt="">
+    <div class="elements-div">
+      <div class="navbar">
+        <h2 id="playerName"></h2>
+        <div class="game-btn">
+          <button onclick="restart();">play Again</button>
+          <button class="btn-setting">Setting</button>
+        </div>
+      </div>
+      <div class="for-computer">
+        <div class="computer-card">
+          <img src="./img/paper.jpg" class=" computer-paper hidden" alt="">
+          <img src="./img/rock.jpg" class=" computer-rock hidden" alt="">
+          <img src="./img/scissor.jpg" class=" computer-scissor hidden" alt="">
+        </div>
+        <div class="computer-score">
+                <h1 id="computerPoint">0</h1>
+                <div class="for-computer-crown">
+                  <img src="./img/crown red.png" alt="">
+                </div>
+                
+        </div>
+      </div>
+      <div class="for-human">
+        <div class="human-card">
+         
+          <img src="./img/rock.jpg" class="human-rock hidden" alt="">
+          <img src="./img/scissor.jpg" class="human-scissor hidden" alt="">
+          <img src="./img/paper.jpg" class="human-paper hidden" alt="">
+        </div>
+        <div class="human-score">
+               
+                <div class="for-human-crown">
+                  <img src="./img/crown blue.png" alt="">
+                </div>
+                <h1 id="humanPoint">0</h1>
+        </div>
+      </div>
+      <div class="main-buttons">
+        <button onclick="rock();">Rock</button>
+        <button onclick="scissor();">Scissor</button>
+        <button onclick="paper();">Paper</button>
+      </div>
+      <h1 id="result"></h1>
+    </div>
+  </div>
+    <!-- <p id="result"></p>
+    <p>Your score:-<span id="humanScore"></span></p>
+    <p>Computer score:-<span id="computerScore"></span></p>
+    <button onclick="rock();">Rock</button>
+    <button onclick="scissor();">Scissor</button>
+    <button onclick="paper();">Paper</button>
+    <button onclick="restart();">Restart</button>
+    <button onclick="displayBox();">Setting</button>
+    <p>computer choose:</p>
+    <p id="computer-value"></p> -->
+    <div class="overlay hidden"></div>
+    
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

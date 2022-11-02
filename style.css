@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    background-color: green;
+    font-family: "Inter",sans-serif;
+}
+.hidden{
+    display: none;
+}
+.popup-box{
+    position: absolute;
+    top: 30%;
+    left: 37%;
+    z-index: 999;
+    background-color: #fff;
+    width: 40rem;
+    height: 27rem;
+    /* border: 5px solid #5D6578; */
+    border-radius: 10px;
+    padding: 1.5%;
+}
+input{
+    margin-top: 0.5rem;
+    height: 4rem;
+    
+}
+label{
+     font-size: 1.4rem;
+}
+.popupBox-btn{
+    height: 4rem;
+    width: 100%;
+    font-size: 1.4rem;
+    /* background-color: #157347; */
+    background-color: #5C636A;
+    color: white;
+    border-style: none;
+    border-radius: 0.5rem;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 785px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 0;
+  }
+  #errorMessage{
+    font-size: 1.4rem;
+    text-align: center;
+    color: red;
+  }
+  .mainBox{
+    position: relative;
+    max-width: 60rem;
+    height: 772px;
+    margin: 0 auto;
+   
+}
+.mainBox img{
+    width: 100%;
+    height: 100%;
+}
+.img1,.img2,.img3{
+    position: absolute;
+}
+.elements-div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    padding: 1%;
+    width: 100%;
+    height: 4rem;
+    /* background: #AAAAAA; */
+   
+}
+.navbar h2{
+  color: #fff;
+}
+/* for Computer */
+.for-computer{
+    margin-top:14rem;
+    width: 55%;
+    height: 11rem;
+    /* background-color: aquamarine; */
+    margin-left: 40%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.computer-card{
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+.computer-card img{
+    position: absolute;
+}
+.computer-score{
+    position: relative;
+    /* background-color: wheat; */
+    width: 20%;
+    padding-top: 2%;
+    
+}
+.computer-score h1{
+    width:70% ;
+    height: 7rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: red;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-align: center;
+    padding: 5%;
+    padding-top: 8%;
+    margin-left: 15%;
+}
+.for-computer-crown{
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    top: 6rem;
+}
+/* for human */
+.for-human{
+    margin-top:4.2rem;
+    width: 55%;
+    height: 11rem;
+   
+    margin-left: 40%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.human-card{
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+.human-card img{
+    position: absolute;
+}
+.human-score{
+    position: relative;
+    /* background-color: wheat; */
+    width: 20%;
+    padding-top: 5%;
+    
+}
+.human-score h1{
+    width:70% ;
+    height: 9rem;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    font-weight: bolder;
+    color: blue;
+    text-align: center;
+    margin-left: 15%;
+    padding-top: 60%;
+}
+.for-human-crown{
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    top: 0;
+}
