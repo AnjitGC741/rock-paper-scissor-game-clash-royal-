@@ -14,8 +14,8 @@
     />
     <title>Game</title>
 </head>
-<body onload="displayBox();">
- <!-- <body>  -->
+<!-- <body onload="displayBox();"> -->
+ <body> 
   <div class="popup-box hidden">
           <form>
             <p id="errorMessage"></p>
@@ -71,10 +71,18 @@
                 <h1 id="humanPoint">0</h1>
         </div>
       </div>
-      <div class="main-buttons">
-        <button onclick="rock();">Rock</button>
-        <button onclick="scissor();">Scissor</button>
-        <button onclick="paper();">Paper</button>
+      <div class="scissor-paper-rock-buttons">
+        <button onclick="paper();" class="main-btn"><img src="./img/paper.jpg" ></button>
+        <button onclick="rock();" class="main-btn"><img src="./img/rock.jpg" alt=""></button>
+        <button onclick="scissor();" class="main-btn"><img src="./img/scissor.jpg" alt=""></button>
+      </div>
+      <div class="choosen-before">
+        <h2>Before</h2>
+        <div class="before-card">
+          <img src="./img/rock.jpg" class="before-rock hidden" alt="">
+          <img src="./img/paper.jpg" class="before-paper hidden" alt="">
+          <img src="./img/scissor.jpg" class="before-scissor hidden" alt="">
+        </div>
       </div>
       <h1 id="result"></h1>
     </div>

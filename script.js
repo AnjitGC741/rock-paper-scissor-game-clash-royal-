@@ -5,6 +5,7 @@ var computerScore = 0;
 var humanScore = 0;
 var presentComputerImg = null;
 var presentHumanImg = null;
+var previousHumanImg = null;
 
 //for popupbox
 const inputValue=document.getElementsByTagName("input");
@@ -35,18 +36,6 @@ document.querySelector(".popupBox-btn").addEventListener('click',function(){
             
             event.preventDefault();
            }
-  // playerName=document.getElementById("player-name").value;
-  //  gamePoint = document.getElementById("game-point").value;
-  // if(playerName == "" || gamePoint == "")
-  // {
-  //   document.getElementById("errorMessage").innerHTML="Player name or game point missing";
-  //   event.preventDefault();
-  // }
-  // else{
-  // document.querySelector(".popup-box").classList.add("hidden");
-  // document.querySelector(".overlay").classList.add("hidden");
-  // event.preventDefault();
-  // }
 });
 document.querySelector(".btn-setting").addEventListener('click',function(){
   document.querySelector(".popup-box").classList.remove("hidden");
@@ -80,6 +69,7 @@ function rock() {
   if(presentHumanImg !== null)
   {
     document.querySelector(".human-"+presentHumanImg).classList.add("hidden");
+    document.querySelector(".before-"+presentHumanImg).classList.add("hidden");
   }
   presentHumanImg = "rock";
   if(presentComputerImg !== null)
@@ -87,23 +77,20 @@ function rock() {
     document.querySelector(".computer-"+presentComputerImg).classList.add("hidden");
   }
   document.querySelector(".human-"+presentHumanImg).classList.remove("hidden");
+  previousHumanImg = "rock";
   var computerValue = generateComputerValue();
   presentComputerImg=computerValue;
   document.querySelector(".computer-"+computerValue).classList.remove("hidden");
   if (computerValue == "rock") {
-    // document.getElementById("result").innerHTML = "It is draw";
      
   } else if (computerValue == "scissor") {
     humanScore++;
     document.getElementById("humanPoint").innerHTML = humanScore;
-    // document.getElementById("humanScore").innerHTML = humanScore;
-    // document.getElementById("result").innerHTML = playerName + " won";
   } else {
     computerScore++;
     document.getElementById("computerPoint").innerHTML = computerScore;
-    // document.getElementById("computerScore").innerHTML = computerScore;
-    // document.getElementById("result").innerHTML = "Computer won";
   }
+  document.querySelector(".before-"+previousHumanImg).classList.remove("hidden");
   gameOverCheck(humanScore,computerScore);
 }
  function scissor()
@@ -111,6 +98,7 @@ function rock() {
   if(presentHumanImg !== null)
   {
     document.querySelector(".human-"+presentHumanImg).classList.add("hidden");
+    document.querySelector(".before-"+presentHumanImg).classList.add("hidden");
   }
   presentHumanImg = "scissor";
   if(presentComputerImg !== null)
@@ -118,6 +106,7 @@ function rock() {
     document.querySelector(".computer-"+presentComputerImg).classList.add("hidden");
   }
   document.querySelector(".human-"+presentHumanImg).classList.remove("hidden");
+  previousHumanImg = "scissor";
   var computerValue = generateComputerValue();
   presentComputerImg=computerValue;
   document.querySelector(".computer-"+computerValue).classList.remove("hidden");
@@ -131,12 +120,14 @@ function rock() {
       humanScore++;
     document.getElementById("humanPoint").innerHTML = humanScore;
     }
+    document.querySelector(".before-"+previousHumanImg).classList.remove("hidden");
  }
  function paper()
  {
     if(presentHumanImg !== null)
     {
       document.querySelector(".human-"+presentHumanImg).classList.add("hidden");
+      document.querySelector(".before-"+presentHumanImg).classList.add("hidden");
     }
     presentHumanImg = "paper";
     if(presentComputerImg !== null)
@@ -144,6 +135,7 @@ function rock() {
       document.querySelector(".computer-"+presentComputerImg).classList.add("hidden");
     }
     document.querySelector(".human-"+presentHumanImg).classList.remove("hidden");
+    previousHumanImg = "paper";
     var computerValue = generateComputerValue();
     presentComputerImg=computerValue;
     document.querySelector(".computer-"+computerValue).classList.remove("hidden");
@@ -156,6 +148,7 @@ function rock() {
     } else {
       
     } 
+    document.querySelector(".before-"+previousHumanImg).classList.remove("hidden");
  }
  function restart()
  {
